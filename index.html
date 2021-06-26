@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="amt-test dashboard">
+    <title>..::amt_test ::..</title>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <link href="alertifyjs/css/alertify.min.css" rel="stylesheet" />
+    <link href="alertifyjs/css/themes/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-image: url('asset/images/laptop1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            
+        }
+        h1 {
+            white-space: pre-line;
+            color: white;
+            margin-top: 16vh;
+            margin-left: 75vh;
+        }
+    </style>
+</head>
+<body class="theme-purple authentication sidebar-collapse">
+
+    <div class="container d-flex flex-column flex-md-row justify-content-between bg-.bg-primary .bg-lighten-md">
+        <button type="button" class="btn btn-link text-white">
+            Project Documentation
+        </button>
+        <button type="button" class="btn btn-link text-white" data-toggle="modal" data-target="#aboutmodal">
+            About us
+        </button>
+        <button type="button" class="btn btn-link text-white" data-toggle="modal" data-target="#studentloginmodal">
+            Student Register/LogIn
+        </button>
+        <button type="button" class="btn btn-link text-white" data-toggle="modal" data-target="#adminloginmodal">
+            Admin LogIn
+        </button>
+    </div>
+
+    <div class="flex">
+        <h1 style="font-size:2vw;"> Welcome to Test Book</h1>
+    </div>
+
+    <div class="container">
+        <div class="row" style="height:18rem;">
+
+            <div class="card m-5 py-3 py-sm-0 col-sm-4 bg-red" style="width:18rem;">
+                <div class="card-body text-success">
+                    <h5 class="card-title">Test</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Java</h6>
+                    <p class="card-text">Please login to take Java Programming language test. If you are not member of testbook!! Please register first and then login.For java Programming language tutorial please visit below link</p>
+                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiU2bvFrvvwAhUS7HMBHUdSDxEQFjAAegQIBRAD&url=https%3A%2F%2Fwww.javatpoint.com%2Fjava-tutorial&usg=AOvVaw2WyHO0_1Ll6BRrmgTF41wc" class="card-link">Java Tutorials</a>
+                </div>
+            </div>
+
+            <div class="card m-5 py-3 py-sm-0 col-sm-4 bg-red" style="width:18rem;">
+                <div class="card-body text-success">
+                    <h5 class="card-title">Test</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">C#</h6>
+                    <p class="card-text">Please login to take C# Programming language test. If you are not member of testbook!! Please register first and then login.For C# Programming language tutorial please visit below link</p>
+                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjAqeTSrvvwAhXp_XMBHSewAu8QFjAAegQIAhAD&url=https%3A%2F%2Fwww.w3schools.com%2Fcs%2F&usg=AOvVaw2YD4ZkouQMmoKUmnrw7JqX" class="card-link">C# Tutorial</a>
+                </div>
+            </div>
+
+            <div class="card m-5 py-3 py-sm-0 col-sm-4 bg-red" style="width:18rem;">
+                <div class="card-body text-success">
+                    <h5 class="card-title">Test</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Javascript</h6>
+                    <p class="card-text">Please login to take Java script language test. If you are not member of testbook!! Please register first and then login.For Javascript tutorial please visit below link</p>
+                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwioyLHervvwAhVx8HMBHebaBDQQFjAAegQIAxAD&url=https%3A%2F%2Fwww.w3schools.com%2Fjs%2F&usg=AOvVaw0InYy1JO9V7729n-hfV1ti" class="card-link">Javascript tutorial</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade mb-3" id="aboutmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutmodal">About us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Hi, I am vikrant Sangekar. I developed this website as my personal project.</p>
+                    <p>If you have any query regarding testbook demo website and want to contact me. Mail me on vsangekar@gmail.com.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bg-blue-grey" id="studentloginmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="studentloginmodal"> Student Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <label id="ulstudemail">Email <span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="uxstudemail" aria-describedby="inputGroupPrepend" required />
+                                    <div class="invalid-feedback">
+                                        Please enter username
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <label id="ulstudpass">Password<span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="uxstudpass" aria-describedby="inputGroupPrepend" required />
+                                    <div class="invalid-feedback">
+                                        Please enter password
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-round waves-effect" id="uxstudlogin">Login</button>
+                            <button type="button" class="btn btn-secondary btn-round waves-effect" data-dismiss="modal">Close</button>
+
+                        </div>
+                        <div>
+                            <h5>Not A Member -> <a href="studentsignup.html">Register</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade bg-blue-grey" id="adminloginmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="adminloginmodal">Admin Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <label id="uladminmail">Email <span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="uxadminmail" aria-describedby="inputGroupPrepend" required />
+                                    <div class="invalid-feedback">
+                                        Please enter Emailid
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <label id="uladminpass">Password<span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="uxadminpass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" aria-describedby="inputGroupPrepend" required />
+                                    <div class="invalid-feedback">
+                                        Please enter password
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btn-round waves-effect" id="uxadminlogin">Login</button>
+                            <button type="button" class="btn btn-secondary btn-round waves-effect" data-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="common/common.js"></script>
+    <script src="alertifyjs/alertify.min.js"></script>
+    <script src="asset/bundles/libscripts.bundle.js"></script>
+    <script src="asset/bundles/vendorscripts.bundle.js"></script>
+
+</body>
+</html>

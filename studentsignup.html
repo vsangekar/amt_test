@@ -1,0 +1,293 @@
+﻿<!doctype html>
+<html class="no-js " lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="Karate App admin panel">
+    <title>Testbook</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+    <link rel="stylesheet" href="asset/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/plugins/fullcalendar/fullcalendar.min.css">
+
+
+
+    <link href="asset/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <!-- JQuery DataTable Css -->
+
+    <link rel="stylesheet" href="asset/plugins/jquery-datatable/dataTables.bootstrap4.min.css">
+
+    <!-- Multiselect -->
+    <link rel="stylesheet" href="asset/plugins/bootstrap-select/css/bootstrap-select.css" />
+    <link rel="stylesheet" href="asset/plugins/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="asset/plugins/select2/select2.css" />
+    <link href="css/data-picker.css" rel="stylesheet" />
+    <!-- Multiselect -->
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="asset/css/main.css">
+    <link rel="stylesheet" href="asset/css/color_skins.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="alertifyjs/css/alertify.min.css" rel="stylesheet" />
+    <link href="alertifyjs/css/themes/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+        .table.table-striped.table-bordered.table-condensed .row-selected {
+            background: #8c99e0;
+            color: #FFFFFF;
+        }
+
+            .table.table-striped.table-bordered.table-condensed .row-selected .fa {
+                color: #FFFFFF;
+            }
+
+        .hidepicker {
+            display: none !important;
+        }
+
+        body {
+            background-image: url('asset/images/laptop1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .tp {
+            top: 10vh;
+            margin-left: 215px;
+        }
+        .tp1 {
+            margin-left: 415px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div class="container-fluid">
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="card col-lg-8 tp bg-light">
+                    <div class=" bg-red" style="text-align:center"><h3 style="text-decoration-color:royalblue">Student Registration</h3></div>
+                <div class="card-body">
+                    <div class="row m-t-30 step1">
+
+                        <div class="col-lg-12 ishideread m-2" style="text-align:right;">
+                            <button class="btn btn-primary btn-icon  btn-icon-mini btn-round pull-right" style="top: 0px !important;" onclick="backtomainscreen()">
+                                <i class="material-icons" style="line-height: 22px;"> arrow_back</i>
+                            </button>
+                        </div>
+                        <div class="col-lg-12 ">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label>Student full Name <span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control studreq" id="uxstudentname" aria-describedby="inputGroupPrepend" required />
+                                        <div class="invalid-feedback">
+                                            Please enter your full name
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <label>Username<span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control studreq" id="uxstudusername" aria-describedby="inputGroupPrepend" required />
+                                            <div class="invalid-feedback">
+                                                Please enter username
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <label id="ulstudbirthdate">Date of Birth<span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                    <input type="date" class="form-control" id="uxstudentdob" placeholder="dd/mm/yyyy" aria-describedby="inputGroupPrepend" required>
+                                    <div class="invalid-feedback">
+                                        Please enter date of birth
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <label>Education<span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                    <div class="form-group">
+                                        <select id="uxstudeducation" class="form-control  show-tick " aria-describedby="inputGroupPrepend" required>
+                                            <option value="SSC">SSC</option>
+                                            <option value="HSC">HSC</option>
+                                            <option value="Diploma">Diploma</option>
+                                            <option value="Undergraduate">Undergraduate</option>
+                                            <option value="Graduate">Graduate</option>
+                                            <option value="Postgraduate">Postgraduate</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select valid option
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <label>Gender<span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <select id="uxgender" class="form-control  show-tick" aria-describedby="inputGroupPrepend" required>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select valid option
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label>Email ID<span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control studreq" id="uxemail" aria-describedby="inputGroupPrepend" required />
+                                        <div class="invalid-feedback">
+                                            Please enter your valid emailid
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <label>Mobile Number <span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control studreq" id="uxmobileno" aria-describedby="inputGroupPrepend" required />
+                                        <div class="invalid-feedback">
+                                            Please enter your valid phone no
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-lg-6">
+                                    <label id="ulstudpass">Password <span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control studreq" id="uxstudpass" aria-describedby="inputGroupPrepend" required />
+                                        <div class="invalid-feedback">
+                                            Please enter your valid password
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <label id="ulstudconfrimpass">Confrim Password <span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control studreq" id="uxstudconfrimpass" aria-describedby="inputGroupPrepend" required />
+                                        <div class="invalid-feedback">
+                                            Please enter your valid confrim password
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label id="uldocumentname">Document Name<span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control studreq" id="uxdocumentname" aria-describedby="inputGroupPrepend" required />
+                                        <div class="invalid-feedback">
+                                            Please enter your valid Document Name
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label id="uluploadfile">Upload Document<span style="color: #FF0000;margin-left:5px" id="classspan">*</span></label>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control studreq" id="uxdocumentfile" accept=".jpg,.png,.pdf,.jpeg" style="opacity: 1;margin-left: 0px;" onchange='uploaddocumentforpurchase(event)' aria-describedby="inputGroupPrepend" required/>
+                                        <span style="color:red;font-size: 11px;">+ Accepted format to upload documents are .pdf,.jpg,.jpeg or .png</span>
+                                        <br>
+                                        <span style="color:red;font-size: 11px;">+ Upload multiple files here.</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row purchasedocument col-md-6 pull-right"></div>
+
+
+                        </div>
+                        <div class="m-t-30 tp1">
+                            <button type="button" class="btn btn-success btn-round" id="uxnextstudent">
+                                Next
+                            </button>
+                            <button type="button" class="btn btn-danger btn-round " id="uxclearstudent">
+                                Clear
+                            </button>
+                            <button type="button" class="btn btn-outline-info btn-round" id="uxadddocument">
+                                Add Document
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-8 container-fluid step2">
+                        <div class="col-lg-12 ishideread m-2" style="text-align:right;">
+                            <button class="btn btn-primary btn-icon  btn-icon-mini btn-round pull-right" style="top: 0px !important;" onclick="backtostep1()">
+                                <i class="material-icons" style="line-height: 22px;"> arrow_back</i>
+                            </button>
+                        </div>
+                        <div style="text-align:center">
+
+                            <label>Upload Profile Image</label>
+                        </div>
+                        <div class="col-md-4 offset-4" style="height:200px;border:1px solid #808080;">
+                            <img style="width:100%;height:100%;margin-left: -15px;" id="uxstudentphoto" />
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 offset-3">
+                                <input type="file" class="form-control" style="opacity: 1;margin-left: 0px;" id="uxstudentprofileimage" onchange='getstudentprofileimagedata(event)' aria-describedby="inputGroupPrepend" required>
+                            </div>
+                        </div>
+
+                        <div class="m-t-30 row" style="text-align:center;">
+                            <button type="button" class="btn btn-success btn-round" id="uxsavestudentinfo">
+                                save
+                            </button>
+                            <input type="hidden" id="uxstudid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </form>
+    </div>
+
+    <script src="asset/bundles/libscripts.bundle.js"></script>
+    <script src="asset/bundles/vendorscripts.bundle.js"></script>
+
+    <script src="asset/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <script src="asset/plugins/jquery-inputmask/jquery.inputmask.bundle.js"></script>
+    <script src="asset/plugins/multi-select/js/jquery.multi-select.js"></script>
+    <script src="asset/plugins/jquery-spinner/js/jquery.spinner.js"></script>
+    <script src="asset/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+    <script src="asset/plugins/nouislider/nouislider.js"></script>
+    <script src="asset/plugins/select2/select2.min.js"></script>
+
+    <!-- Datatble -->
+    <script src="asset/bundles/datatablescripts.bundle.js"></script>
+    <script src="asset/js/pages/forms/advanced-form-elements.js"></script>
+    <script src="asset/plugins/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
+    <script src="asset/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js"></script>
+    <script src="asset/plugins/jquery-datatable/buttons/buttons.colVis.min.js"></script>
+    <script src="asset/plugins/jquery-datatable/buttons/buttons.html5.min.js"></script>
+    <script src="asset/plugins/jquery-datatable/buttons/buttons.print.min.js"></script>
+    <!-- Datatble -->
+    <script src="asset/bundles/fullcalendarscripts.bundle.js"></script>
+
+    <script src="asset/bundles/mainscripts.bundle.js"></script>
+    <script src="alertifyjs/alertify.min.js"></script>
+    <script src="common/common.js"></script>
+    <script src="js/studentsignup.js"></script>
+</body>
+</html>
