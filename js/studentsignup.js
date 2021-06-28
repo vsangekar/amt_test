@@ -14,13 +14,8 @@ function init() {
     $("#uxnextstudent").click(function () {
         var nextdata = true;
         debugger;
-        if (($("#uxstudentname").val() == "") || ($("#uxstudusername").val() == "") || ($("#uxemail").val() == "") || ($("#uxemail").val() == "") || ($("#uxmobileno").val() == "") || ($("#uxstudconfrimpass").val() == "") || ($("#uxstudpass").val() == "") || ($("#uxdocumentname").val() == "") || ($("#uxstudeducation").val() == "") || ($("#uxgender").val() == "")) {
-            var forms = document.querySelectorAll('.needs-validation')
-            Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                    form.classList.add('was-validated')
-                })
-            nextdata = false;
+        if (($("#uxstudentname").val() == "") || ($("#uxstudusername").val() == "") || ($("#uxemail").val() == "") || ($("#uxemail").val() == "") || ($("#uxmobileno").val() == "") || ($("#uxstudconfrimpass").val() == "") || ($("#uxstudpass").val() == "") || ($("#uxstudeducation").val() == "") || ($("#uxgender").val() == "")) {
+
         }
         if (nextdata == true) {
             $(".step2").show();
@@ -31,20 +26,22 @@ function init() {
     $("#uxsavestudentinfo").click(function () {
         var savedata = true;
         debugger;
-        if ($("#uxstudentprofileimage").val() == "") {
-            var forms = document.querySelectorAll('.needs-validation')
-            Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                    form.classList.add('was-validated')
-                })
-            savedata = false;
+        if (($("#uxstudentprofileimage").val() == "") || ($("#uxdocumentname").val() == "") ) {
+     
         }
         if (savedata == true) {
             insertupdatestudentdata();
         }
     });
 
+    $("#uxbacktohome").click(function () {
+        window.location.href = "index.html";
+    });
 
+    $("#backtostep1").click(function () {
+        $(".step1").show();
+        $(".step2").hide();
+    });
 }
 
 function insertupdatestudentdata() {
@@ -61,6 +58,7 @@ function insertupdatestudentdata() {
     model["studemailid"]      = $("#uxemail").val();
     model["studmobileno"]     = $("#uxmobileno").val();
     model["studpassword"]     = $("#uxstudpass").val();
+    model["studentaddress"]   = $("#uxstudaddress").val();
     model["studdocumentname"] = $("#uxdocumentname").val();
     model["studdocumentfile"] = $("#uxdocumentfile").val();
     model["studprofileimg"] = $("#uxstudentprofileimage").val();
@@ -79,16 +77,6 @@ function insertupdatestudentdata() {
         , function (errorText) {
         }
     );
-}
-
-function backtomainscreen() {
-    debugger;
-    document.location.href = "index.html";
-}
-
-function backtostep1(){
-    $(".step1").show();
-    $(".step2").hide();
 }
 
 function uploaddocumentforpurchase(evt) {

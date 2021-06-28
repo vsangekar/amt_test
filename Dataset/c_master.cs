@@ -16,29 +16,24 @@ namespace amt_test.Dataset
         {
             connstr = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
         }
-        public DataSet insertupdatestudentprofile(studentmaster sm)
+        public void insertupdatestudent(studentmaster sm, ref int docid)
         {
-            DataSet ds = new DataSet();
-            SqlConnection conn = new SqlConnection(connstr);
             try
             {
-
-                if (conn.State != ConnectionState.Open)
-                    conn.Open();
-                SqlCommand sqlComm = new SqlCommand("pr_nm_insertupdatestudentprofile", conn);
-                sqlComm.CommandTimeout = 0;
-                sqlComm.CommandType = CommandType.StoredProcedure;
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = sqlComm;
-                da.Fill(ds);
-                conn.Close();
-
+                if (sm.studid==null)
+                {
+                    nc.AccessComponent.Insert(sm, connstr, ref docid);
+                }
+                else
+                {
+                    string condition = " studid=" + sm.studid;
+                    nc.AccessComponent.Update(sm, condition, connstr);
+                }
             }
             catch (Exception ex)
             {
-                conn.Close();
+                throw ex;
             }
-            return ds;
         }
 
         public DataSet checkforrecordexists(string mobileno, string email, int refid, string reftype)
